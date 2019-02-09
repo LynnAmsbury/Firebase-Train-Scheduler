@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase Train Scheduler</title>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" /> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" /> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-2"></div>
+
+            <div class="jumbotron col-md-8 bg-secondary text-white text-center">
+                <h1>Train Schedule</h1>
+                <h3>It's Time for a Trip!</h3>
+            </div>
+
+            <div class="col-md-2"></div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-8 border border-secondary rounded p-3">
+
+                <div class="card border border-secondary rounded p-3">
+
+                    <table id="trainTable" class="table border border-secondary rounded p-3">
+                        <thead>
+                            <tr class="bg-secondary text-white">
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <!-- <th scope="col">First Train</th> -->
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>Place for train schedule info</p>
+                            <!-- <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer> -->
+                        </blockquote>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="card-header bg-secondary text-white text-center">
+                    <h5>Add a Train</h5>
+                </div>
+
+                <form id="form" class="border border-secondary rounded p-3">
+                    <div class="form-group">
+                        <label for="trainName">Train Name</label>
+                        <input type="text" class="form-control" id="trainName" placeholder="Name of Train">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" class="form-control" id="destination" placeholder="Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstTrain">First Train Time (HH:mm)</label>
+                        <input type="text" class="form-control" id="firstTrain" placeholder="HH:mm">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency (min)</label>
+                        <input type="number" class="form-control" id="frequency" placeholder="15">
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
